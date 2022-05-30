@@ -10,5 +10,13 @@ function createGrid(v) {
         }
         container.appendChild(row);
     }
+    
 }
 createGrid(16);
+
+const gridSquare = document.querySelectorAll('.gridSquare')
+ 
+ for (let i=0; i<gridSquare.length; i++) {
+     gridSquare[i].addEventListener('mouseenter', () => gridSquare[i].style.backgroundColor = 'black')
+ }
+
