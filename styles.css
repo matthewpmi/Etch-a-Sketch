@@ -1,3 +1,10 @@
 #container {
-    
+    border: 1px solid black;
+    display: flex;
+}
+
+.row .gridSquare {
+    border: 1px solid black;
+    height: 16px;
+    width: 16px;
 }
