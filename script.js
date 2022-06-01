@@ -21,7 +21,7 @@ function createGrid(v) {
 createGrid(16);
 
 function changeSize(input) {
-    if(input >= 2 || input <=100) {
+    if(input >= 2 && input <=100) {
     createGrid(input);
     }
     else {
