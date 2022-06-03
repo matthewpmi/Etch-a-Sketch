@@ -4,9 +4,19 @@
     width: 550px;
     height: 550px;
     cursor: crosshair;
+    margin: auto;
 }
 
-.cell {
-    border: 1px solid black;
-
+#controls {
+    display: flex;
+    margin: auto;
+    flex-direction: column;
 }
+
+#size,
+#colors {
+    margin: auto;
+    margin-top: 10px;
+}
+
+

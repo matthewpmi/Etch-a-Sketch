@@ -11,14 +11,40 @@ function createGrid(v) {
         cell.className = 'cell';  
         container.appendChild(cell);        
         }
-        
+        RGB()
+    }
+
+function black() {
     const cellColor = document.querySelectorAll('.cell')
     for (let i=0; i<cellColor.length; i++) {
         cellColor[i].addEventListener('mouseenter', () => cellColor[i].style.backgroundColor = 'black')
- }
+    }
 }
 
+function getRandomColor() {
+    var letters = '0123456789ABCDEF';
+    var color = '#';
+    for (var i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  }
+
+function RGB() {
+    const cellColor = document.querySelectorAll('.cell')
+    for (let i=0; i<cellColor.length; i++) {
+        cellColor[i].addEventListener('mouseenter', () => cellColor[i].style.backgroundColor = getRandomColor())
+    }
+}
 createGrid(16);
+
+const clear = document.querySelector('#clear')
+clear.addEventListener('click', () => {
+    const cellColor = document.querySelectorAll('.cell')
+    for (let i=0; i<cellColor.length; i++) {
+        cellColor[i].style.backgroundColor = 'white';
+    }
+})
 
 function changeSize(input) {
     if(input >= 2 && input <=100) {
